@@ -1,0 +1,46 @@
+{
+  "name": "@j.u.p.iter/react-dynamic-list",
+  "version": "0.0.0-semantically-released",
+  "description": "Universal component to create dynamic list",
+  "keywords": [
+    "react",
+    "dynamic list",
+    "list",
+    "dynamic"
+  ],
+  "main": "dist/lib/react-dynamic-list.cjs.js",
+  "module": "dist/lib/react-dynamic-list.esm.js",
+  "umd:main": "dist/lib/react-dynamic-list.umd.min.js",
+  "source": "dist/lib/react-dynamic-list.js",
+  "typings": "dist/types",
+  "repository": "git@github.com:j-u-p-iter/react-dynamic-list.git",
+  "author": "Leontyev Kirill (j.u.p.iter) <pn79122821224@gmail.com> (http://j-u-p-iter.pro/)",
+  "files": [
+    "dist"
+  ],
+  "license": "MIT",
+  "scripts": {
+    "commit": "jupiter-scripts precommit --allowJs",
+    "build": "jupiter-scripts build --bundle",
+    "start": "yarn run build --watch",
+    "lint": "jupiter-scripts lint --format codeFrame",
+    "lint:fix": "yarn run lint --fix",
+    "test": "jupiter-scripts test"
+  },
+  "peerDependencies": {
+    "react": ">=16.4.2"
+  },
+  "devDependencies": {
+    "@j.u.p.iter/jupiter-scripts": "^1.8.0",
+    "@types/react": "^16.7.18",
+    "@types/react-router-dom": "^4.3.1",
+    "@types/uuid": "^3.4.4",
+    "react": "^16.7.0",
+    "react-dom": "^16.7.0",
+    "react-router-dom": "^4.3.1",
+    "react-testing-library": "^5.4.2"
+  },
+  "dependencies": {
+    "uuid": "^3.3.2"
+  }
+}

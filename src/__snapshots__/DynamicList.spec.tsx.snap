@@ -1,0 +1,73 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`DynamicList exposes correct API 1`] = `
+<div>
+  <ul>
+    <li>
+      Some Title
+      <button>
+        Remove Item Some Title
+      </button>
+    </li>
+    <li>
+      One More Title
+      <button>
+        Remove Item One More Title
+      </button>
+    </li>
+  </ul>
+  <button>
+    Add Item
+  </button>
+</div>
+`;
+
+exports[`DynamicList exposes correct API 2`] = `
+<div>
+  <ul>
+    <li>
+      Some Title
+      <button>
+        Remove Item Some Title
+      </button>
+    </li>
+    <li>
+      One More Title
+      <button>
+        Remove Item One More Title
+      </button>
+    </li>
+    <li>
+      And One More Item
+      <button>
+        Remove Item And One More Item
+      </button>
+    </li>
+  </ul>
+  <button>
+    Add Item
+  </button>
+</div>
+`;
+
+exports[`DynamicList exposes correct API 3`] = `
+<div>
+  <ul>
+    <li>
+      One More Title
+      <button>
+        Remove Item One More Title
+      </button>
+    </li>
+    <li>
+      And One More Item
+      <button>
+        Remove Item And One More Item
+      </button>
+    </li>
+  </ul>
+  <button>
+    Add Item
+  </button>
+</div>
+`;
