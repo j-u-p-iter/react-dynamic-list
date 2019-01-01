@@ -8,7 +8,7 @@ describe("DynamicList", () => {
   let container: any;
 
   beforeAll(() => {
-    const data = [
+    const dataItems = [
       {
         title: "Some Title"
       },
@@ -18,7 +18,7 @@ describe("DynamicList", () => {
     ];
 
     const DynamicList = () => (
-      <DynamicListController data={data}>
+      <DynamicListController data={dataItems}>
         {({ api: { addItem, removeItem, getItems } }) => {
           const items = getItems();
 
