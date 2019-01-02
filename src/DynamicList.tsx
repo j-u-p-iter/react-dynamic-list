@@ -1,5 +1,4 @@
 import * as React from "react";
-import * as uuid from "uuid";
 
 interface IObjectType {
   [key: string]: any;
@@ -27,36 +26,19 @@ export class DynamicList extends React.Component<
   IDynamicListState
 > {
   public state: IDynamicListState = {
-    items: []
+    items: this.props.data
   };
-
-  public extendNewItem(newItem: IObjectType): IObjectType {
-    return {
-      ...newItem,
-      id: uuid.v4()
-    };
-  }
-
-  public initializeState = (): void => {
-    this.setState({
-      items: this.props.data.map(this.extendNewItem)
-    });
-  };
-
-  public componentDidMount() {
-    this.initializeState();
-  }
 
   public addItem = (newItem: IObjectType): void => {
     this.setState(state => ({
-      items: [...state.items, this.extendNewItem(newItem)]
+      items: [...state.items, newItem]
     }));
   };
 
-  public removeItem = (itemToRemoveId: IObjectType): void => {
+  public removeItem = (itemToRemoveIndex: number): void => {
     this.setState(state => ({
-      items: state.items.filter(({ id }) => {
-        return id !== itemToRemoveId;
+      items: state.items.filter((_, currentIndex) => {
+        return currentIndex !== itemToRemoveIndex;
       })
     }));
   };

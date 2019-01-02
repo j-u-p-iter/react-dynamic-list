@@ -25,11 +25,11 @@ describe("DynamicList", () => {
           return items ? (
             <div>
               <ul>
-                {items.map(({ id, title }) => (
-                  <li key={id}>
+                {items.map(({ title }, index) => (
+                  <li key={index}>
                     {title}
                     <button
-                      onClick={() => removeItem(id)}
+                      onClick={() => removeItem(index)}
                     >{`Remove Item ${title}`}</button>
                   </li>
                 ))}
