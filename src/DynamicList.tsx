@@ -21,6 +21,8 @@ interface IDynamicListState {
   items: IObjectType[];
 }
 
+const noop = () => {};
+
 export class DynamicList extends React.Component<
   IDynamicListProps,
   IDynamicListState
@@ -29,18 +31,25 @@ export class DynamicList extends React.Component<
     items: this.props.data
   };
 
-  public addItem = (newItem: IObjectType): void => {
-    this.setState(state => ({
-      items: [...state.items, newItem]
-    }));
+  public addItem = (
+    newItem: IObjectType,
+    callback: () => void = noop
+  ): void => {
+    this.setState(state => ({ items: [...state.items, newItem] }), callback);
   };
 
-  public removeItem = (itemToRemoveIndex: number): void => {
-    this.setState(state => ({
-      items: state.items.filter((_, currentIndex) => {
-        return currentIndex !== itemToRemoveIndex;
-      })
-    }));
+  public removeItem = (
+    itemToRemoveIndex: number,
+    callback: () => void = noop
+  ): void => {
+    this.setState(
+      state => ({
+        items: state.items.filter(
+          (_, currentIndex) => currentIndex !== itemToRemoveIndex
+        )
+      }),
+      callback
+    );
   };
 
   public getItems = () => this.state.items;
