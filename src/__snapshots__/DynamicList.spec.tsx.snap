@@ -22,6 +22,9 @@ exports[`DynamicList exposes correct API 1`] = `
   <button>
     Add Item Without Callback
   </button>
+  <button>
+    Set new items
+  </button>
 </div>
 `;
 
@@ -53,6 +56,9 @@ exports[`DynamicList exposes correct API 2`] = `
   <button>
     Add Item Without Callback
   </button>
+  <button>
+    Set new items
+  </button>
 </div>
 `;
 
@@ -77,6 +83,37 @@ exports[`DynamicList exposes correct API 3`] = `
   </button>
   <button>
     Add Item Without Callback
+  </button>
+  <button>
+    Set new items
+  </button>
+</div>
+`;
+
+exports[`DynamicList exposes correct API 4`] = `
+<div>
+  <ul>
+    <li>
+      New Some Title
+      <button>
+        Remove Item New Some Title
+      </button>
+    </li>
+    <li>
+      New One More Title
+      <button>
+        Remove Item New One More Title
+      </button>
+    </li>
+  </ul>
+  <button>
+    Add Item
+  </button>
+  <button>
+    Add Item Without Callback
+  </button>
+  <button>
+    Set new items
   </button>
 </div>
 `;

@@ -31,6 +31,14 @@ export class DynamicList extends React.Component<
     items: this.props.data
   };
 
+  public componentDidUpdate({ data: prevData }: IDynamicListProps) {
+    const { data: newData } = this.props;
+
+    if (newData !== prevData) {
+      this.setState({ items: newData });
+    }
+  }
+
   public addItem = (
     newItem: IObjectType,
     callback: () => void = noop
